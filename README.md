@@ -2,6 +2,10 @@
 
 Proyecto de ejemplo de configuración de Webpack 5. 
 
+Referencias:
+- (https://webpack.js.org/guides/getting-started/)
+- (https://webpack.js.org/configuration/)
+
 Comandos para generar el proyecto:
 - npm install -D webpack-cli
 - npm install -D @webpack-cli/generators
