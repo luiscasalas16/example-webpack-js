@@ -16,7 +16,7 @@ const config = {
     //cambia el directorio de build a docs, para que github pages funcione correctamente.
     path: path.resolve(__dirname, "docs"),
     //habilita uso de assets y copia en build
-    assetModuleFilename: 'assets/[name].[ext]'
+    assetModuleFilename: 'assets/[name][ext]'
   },
   devServer: {
     open: true,
