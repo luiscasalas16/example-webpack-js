@@ -11,10 +11,12 @@ const stylesHandler = isProduction
   : "style-loader";
 
 const config = {
-  entry: "./src/index.js",
+  entry: "./src/main.js",
   output: {
     //cambia el directorio de build a docs, para que github pages funcione correctamente.
     path: path.resolve(__dirname, "docs"),
+    //habilita uso de assets y copia en build
+    assetModuleFilename: 'assets/[name].[ext]'
   },
   devServer: {
     open: true,
@@ -40,7 +42,8 @@ const config = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: "asset",
+        //habilita uso de assets y copia en build
+        type: "asset/resource",
       },
 
       // Add your rules for custom modules here
