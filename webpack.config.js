@@ -13,6 +13,7 @@ const stylesHandler = isProduction
 const config = {
   entry: "./src/index.js",
   output: {
+    //cambia el directorio de build a docs, para que github pages funcione correctamente.
     path: path.resolve(__dirname, "docs"),
   },
   devServer: {
