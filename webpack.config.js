@@ -13,6 +13,8 @@ const stylesHandler = isProduction
 const config = {
   entry: "./src/main.js",
   output: {
+    //habilita uso de hash en js de build
+    filename: 'main.[contenthash].js',
     //cambia el directorio de build a docs, para que github pages funcione correctamente.
     path: path.resolve(__dirname, "docs"),
     //habilita uso de assets y copia en build
@@ -56,7 +58,10 @@ module.exports = () => {
   if (isProduction) {
     config.mode = "production";
 
-    config.plugins.push(new MiniCssExtractPlugin());
+    config.plugins.push(new MiniCssExtractPlugin({
+      //habilita uso de hash en css de build
+      filename: 'main.[contenthash].css',
+    }));
   } else {
     config.mode = "development";
   }
