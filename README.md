@@ -1,4 +1,4 @@
-# webpack-js
+# example-webpack-js
 
 Proyecto de ejemplo de configuración de Webpack 5. 
 
